@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private String[][] estados;
     private String[] regioes;
     private boolean[] gabarito;
-    private LinearLayout layout;
+    private ConstraintLayout layout;
     private int contador, acertos = 0,contador2;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         contador = 0;
         contador2 = 0;
 
-        layout = (LinearLayout) findViewById(R.id.layout);
+        layout = (ConstraintLayout) findViewById(R.id.layout);
         tvAfirmacao = (TextView) findViewById(R.id.tvAfirmacao);
      //   ivDireita = (ImageView) findViewById(R.id.ivDireita);
      //   ivEsquerda = (ImageView) findViewById(R.id.ivEsquerda);
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         }
 */
         tvAfirmacao.setText( regioes[contador] );
-
+        tvEstado.setText( estados[contador][contador2]);
         layout.setOnTouchListener( new OnSwipeTouchListener(this){
 
             @Override
